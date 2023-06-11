@@ -108,7 +108,6 @@ public class Main {
     }
 
 
-
     public static void main(String[] args) {
 
         // 1.
@@ -160,7 +159,6 @@ public class Main {
         // 8.
 
         System.out.println(sumNum("252"));
-
 
 
     }
