@@ -67,14 +67,27 @@ public class Main {
 
     // 5.
 
-    public static int countNumberTwo(int a) {
+//    public static int countNumberTwo(int a) {
+//        int count = 0;
+//        String numString = Integer.toString(a);
+//        for (int i = 0; i < numString.length(); i++) {
+//            if (numString.charAt(i) == '2') {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+
+    public static int getCountOfSpecificNumber(Integer value, char specificNumber) {
         int count = 0;
-        String numString = Integer.toString(a);
-        for (int i = 0; i < numString.length(); i++) {
-            if (numString.charAt(i) == '2') {
+        String strValue = value.toString();
+
+        for (int i = 0; i < value.toString().length(); i++) {
+            if (strValue.charAt(i) == specificNumber) {
                 count++;
             }
         }
+
         return count;
     }
 
@@ -93,6 +106,17 @@ public class Main {
     }
 
     // 7.
+
+    public static double getPentagonArea(double sideLength) {
+        double area = 0;
+
+        double numerator = 5 * Math.pow(sideLength, 2);
+        double denominator = 4 * Math.tan(Math.PI / 5);
+
+        area = numerator / denominator;
+
+        return area;
+    }
 
     // 8.
 
@@ -148,13 +172,16 @@ public class Main {
 
         // 5.
 
-        System.out.println(countNumberTwo(Integer.parseInt("1254212")));
+//        System.out.println(countNumberTwo(Integer.parseInt("1254212")));
+        System.out.println(getCountOfSpecificNumber(1254212, '2'));
 
         // 6.
 
         System.out.println(findVowels("AIEEE"));
 
         // 7.
+
+        System.out.println(getPentagonArea(6));
 
         // 8.
 
